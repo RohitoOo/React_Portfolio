@@ -9,6 +9,7 @@ import {
   Switch,
 } from 'react-router-dom';
 
+import * as firebase from 'firebase';
 
 
 

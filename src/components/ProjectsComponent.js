@@ -3,9 +3,7 @@ import styled from 'styled-components';
 import rohito from '../assets/rohito.jpg'
 
 const RepoList = styled.ul`
-
 list-style-type: none;
-
 `
 
 const Image = styled.img`

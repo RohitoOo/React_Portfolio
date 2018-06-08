@@ -13,6 +13,16 @@ width: 50%;
 
 `
 
+const StyledLi = styled.li`
+color:black;
+background : #8888;
+border-radius : 50px;
+margin: 30px;
+padding : 10px;
+
+`
+
+
 
 class ProjectsComponent extends Component {
 
@@ -44,12 +54,13 @@ class ProjectsComponent extends Component {
 
 
 
+
   render() {
     return (
       <div>
             <Image src={rohito}/>
             <RepoList className="repo_list">{this.state.data.map((repo)=>{
-              return  <li> Project :  {repo.name}  <br/> {repo.full_name} <br/> Language : {repo.language} <br/> Description : { repo.description} <br/> <hr/></li>
+              return  <StyledLi> Project :  {repo.name}  <br/> {repo.full_name} <br/> Language : {repo.language} <br/> Description : { repo.description} <br/> </StyledLi>
               })}</RepoList>
       </div>
     );

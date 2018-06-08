@@ -23,7 +23,6 @@ const Image = styled.img`
 width: 100%;
     justify-self: end;
     border-radius: 2000px;
-
 `
 
 

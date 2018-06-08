@@ -25,13 +25,14 @@ const Menu1 = styled.h1 `
 
 background: ${props => props.color}
 border-radius: 60px;
+color: black;
 
 `
 
 const StyledLink =styled(NavLink)`
 
 text-decoration : none;
-&:hover {color : white};
+&:hover {color : black};
 
 `
 

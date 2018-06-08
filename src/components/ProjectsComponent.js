@@ -60,7 +60,7 @@ class ProjectsComponent extends Component {
       <div>
             <Image src={rohito}/>
             <RepoList className="repo_list">{this.state.data.map((repo)=>{
-              return  <StyledLi> Project :  {repo.name}  <br/> {repo.full_name} <br/> Language : {repo.language} <br/> Description : { repo.description} <br/> </StyledLi>
+              return  <StyledLi> Project :  {repo.name}  <br/> {repo.full_name} <br/> Language : {repo.language} <br/> LinkUp : <a  target="_blank" href={repo.html_url}>{repo.html_url}</a> <br/>Description : { repo.description} <br/> </StyledLi>
               })}</RepoList>
       </div>
     );

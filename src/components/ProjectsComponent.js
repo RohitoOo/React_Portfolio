@@ -22,7 +22,12 @@ padding : 10px;
 
 `
 
+const Projects = styled.div`
 
+display: grid;
+grid-template-columns: 100%;
+
+`
 
 class ProjectsComponent extends Component {
 
@@ -31,10 +36,46 @@ class ProjectsComponent extends Component {
      super();
      this.state = {
        data : [],
-
+       filter: ''
      };
 
    }
+
+
+handleFilterChange = (e) => {
+         this.setState(
+          {filter: e.target.value}
+         );
+}
+
+
+getFilterProfiles = () => {
+
+        const data = this.state.data || [];
+
+
+return data.filter((repo)=> {
+  return repo.name.toLowerCase().includes(this.state.filter.toLowerCase())
+  || (repo.language || '').toLowerCase().includes(this.state.filter.toLowerCase())
+}) || data
+
+
+
+
+
+
+
+        // let data = this.state.data.map((repo) => {
+        //     return repo.name.includes(this.state.filter)
+        // });
+        //
+        // if (filteredData.length === 0) filteredData = [...data];
+        // return filteredData;
+
+
+    };
+
+
 
 
 
@@ -55,13 +96,20 @@ class ProjectsComponent extends Component {
 
 
 
+
   render() {
     return (
       <div>
+
+
             <Image src={rohito}/>
-            <RepoList className="repo_list">{this.state.data.map((repo)=>{
+        <Projects>
+
+            <input onChange={(e) => this.handleFilterChange(e)} placeholder="Find a repository..." />
+            <RepoList className="repo_list">{this.getFilterProfiles().map((repo)=>{
               return  <StyledLi> Project :  {repo.name}  <br/> {repo.full_name} <br/> Language : {repo.language} <br/> LinkUp : <a  target="_blank" href={repo.html_url}>{repo.html_url}</a> <br/>Description : { repo.description} <br/> </StyledLi>
               })}</RepoList>
+          </Projects>
       </div>
     );
 

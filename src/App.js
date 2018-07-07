@@ -10,7 +10,6 @@ import ProjectsComponent from './components/ProjectsComponent'
 import ResumeComponent from './components/ResumeComponent'
 import AboutComponent from './components/AboutComponent'
 
-
 const Layout = styled.div `
 
 display: grid;
@@ -27,18 +26,18 @@ class App extends Component {
           <Layout >
             <MenuComponent/>
             <Switch>
-              <Route exact path='/' render={() => {
+              <Route exact="exact" path='/' render={() => {
                   return <BodyComponent/>
                 }}/>
               <Route path='/projects' render={() => {
-                    return <ProjectsComponent/>
-                  }}/>
-                <Route path='/resume' render={() => {
-                    return <ResumeComponent/>
-                  }}/>
-                <Route path='/about' render={() => {
-                    return <AboutComponent />
-                  }}/>
+                  return <ProjectsComponent/>
+                }}/>
+              <Route path='/resume' render={() => {
+                  return <ResumeComponent/>
+                }}/>
+              <Route path='/about' render={() => {
+                  return <AboutComponent/>
+                }}/>
             </Switch>
           </Layout>
         </WrapperComponent>

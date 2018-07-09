@@ -7,7 +7,7 @@ import * as firebase from 'firebase';
 
 const Layout = styled.div `
   display: grid;
-  grid-template-columns: repeat(4, 25%);
+  grid-template-columns: repeat(5, 20%);
 font-size: 20px;
 grid-column-gap: 5px;
 
@@ -34,7 +34,7 @@ class MenuComponent extends Component {
       <Layout >
 
         <Menu1 className="activeClassName " color="white" class="menu1">
-          <StyledLink to="/">Home</StyledLink>
+          <StyledLink to="/">My Story</StyledLink>
         </Menu1>
         <Menu1 className="activeClassName" color="white" class="menu2">
           <StyledLink to="/projects">
@@ -44,8 +44,12 @@ class MenuComponent extends Component {
           <StyledLink to="/resume">Resume</StyledLink>
         </Menu1>
         <Menu1 className="activeClassName" color="white" class="menu2">
-          <StyledLink to="/about">About</StyledLink>
+          <StyledLink to="/about">Skills</StyledLink>
         </Menu1>
+        <Menu1 className="activeClassName" color="white" class="menu2">
+          <StyledLink to="/about">Photos</StyledLink>
+        </Menu1>
+      
 
       </Layout>
     </div>);

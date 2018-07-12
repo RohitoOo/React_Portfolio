@@ -22,7 +22,7 @@ width: 100%;
     border-radius: 2000px;
 `
 
-export class BodyComponent extends Component { // eslint-disable-line react/prefer-stateless-function
+class BodyComponent extends Component { // eslint-disable-line react/prefer-stateless-function
   render() {
     return (<Layout>
       <Text >
@@ -36,4 +36,4 @@ export class BodyComponent extends Component { // eslint-disable-line react/pref
   }
 }
 
-export default BodyComponent;
+export default BodyComponent

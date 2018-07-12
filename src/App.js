@@ -17,18 +17,16 @@ grid-template-columns: 100%
 
 `
 
-class App extends Component {
+export default class App extends Component {
   render() {
     return (<div className="App">
 
       <BrowserRouter>
         <WrapperComponent>
-          <Layout >
+
             <MenuComponent/>
             <Switch>
-              <Route exact="exact" path='/' render={() => {
-                  return <BodyComponent/>
-                }}/>
+              <Route exact="exact" path='/' component={BodyComponent} />
               <Route path='/projects' render={() => {
                   return <ProjectsComponent/>
                 }}/>
@@ -39,11 +37,9 @@ class App extends Component {
                   return <AboutComponent/>
                 }}/>
             </Switch>
-          </Layout>
+
         </WrapperComponent>
       </BrowserRouter>
-    </div>);
+    </div>)
   }
 }
-
-export default App;

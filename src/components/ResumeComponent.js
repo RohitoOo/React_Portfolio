@@ -1,14 +1,13 @@
 import React, {Component} from 'react';
 import * as firebase from 'firebase';
 
-export class ResumeComponent extends Component { // eslint-disable-line react/prefer-stateless-function
+class ResumeComponent extends Component { // eslint-disable-line react/prefer-stateless-function
 
-  constructor() {
-    super();
+  constructor(props) {
+    super(props)
     this.state = {
       name: ""
-    };
-
+    }
   }
 
   componentDidMount() {
